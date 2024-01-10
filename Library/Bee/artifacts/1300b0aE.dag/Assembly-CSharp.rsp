@@ -398,6 +398,9 @@
 "Assets/_Game/Scripts/PlayerBrick.cs"
 "Assets/_Game/Scripts/Stage.cs"
 "Assets/_Game/Scripts/Stair.cs"
+"Assets/_Game/Scripts/StateMachie/AttackState.cs"
+"Assets/_Game/Scripts/StateMachie/IState.cs"
+"Assets/_Game/Scripts/StateMachie/PatrolState.cs"
 -langversion:9.0
 
 /deterministic

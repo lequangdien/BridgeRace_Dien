@@ -12,7 +12,7 @@ public class Brick : ColorObject
     }
     public void OnDespawn()
     {
-        stage.AddEmtyPoint(transform.position);
+        stage.RemoveBrick(this);
     }
 
 }

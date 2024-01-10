@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7539334784782848786}
   - component: {fileID: 5017352977627620063}
   - component: {fileID: 6356555562929286988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8708198014058715677}
   - component: {fileID: 2285721385688241553}
   - component: {fileID: 5942431219020890498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brick
   m_TagString: Brick
   m_Icon: {fileID: 0}
@@ -198,3 +198,4 @@ MonoBehaviour:
   colorMat: []
   colorData: {fileID: 11400000, guid: 9176eff0158a1264497f70b07640f2ef, type: 2}
   renderer: {fileID: 6356555562929286988}
+  stage: {fileID: 0}

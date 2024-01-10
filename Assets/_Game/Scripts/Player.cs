@@ -8,9 +8,8 @@ public class Player : Character
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private FixedJoystick _joystick;
     [SerializeField] private float _moveSpeed;
-
     private Vector3 movement;
-    private void Start()
+    public  void Start()
     {
         ChangeColor(ColorType.Black);
     }
@@ -22,7 +21,7 @@ public class Player : Character
         }
         else
         {
-            _rb.velocity = Vector3.zero; // D?ng Rigidbody
+            _rb.velocity = Vector3.zero; 
         }
         if (!IsWallInFront())
         {
@@ -51,21 +50,5 @@ public class Player : Character
         return false;
     }
     
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag(ConstranName.Brick))
-        {
-            Brick brick=other.GetComponent<Brick>();
-            if (brick.colorType== colorType)
-            {
-                brick.OnDespawn();
-               
-                AddBrick();
-
-                Destroy(brick.gameObject);
-            }
-        }
-        
-        
-    }
+    
 }

@@ -14,12 +14,14 @@ public class Character : ColorObject
     [SerializeField] private PlayerBrick playerBrickPrefab;
     [SerializeField] private Transform brickHolder;
     public Stage stage;
+    public int BrickCount => playerBricks.Count;
+    
     public bool CanMove(Vector3 nextPoint)
     {
 
         bool isCanMove = true;
         RaycastHit hit;
-        if (Physics.Raycast(nextPoint, Vector3.down, out hit, 0.5f, stairLayer))
+        if (Physics.Raycast(nextPoint, Vector3.down, out hit, 2f, stairLayer))
         {
 
             Stair stair = hit.collider.GetComponent<Stair>();
@@ -59,5 +61,22 @@ public class Character : ColorObject
             Destroy(playerBricks[i]);
         }
         playerBricks.Clear();
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(ConstranName.Brick))
+        {
+            Brick brick = other.GetComponent<Brick>();
+            if (brick.colorType == colorType)
+            {
+                brick.OnDespawn();
+
+                AddBrick();
+
+                Destroy(brick.gameObject);
+            }
+        }
+
+
     }
 }

@@ -8,11 +8,11 @@ public class NewStageBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Player player = other.GetComponent<Player>();
-        if(player != null)
+        Character character = other.GetComponent<Character>();
+        if(character != null)
         {
-            player.stage = stage;
-            stage.InitColor(player.colorType,30);
+            character.stage = stage;
+            stage.InitColor(character.colorType,52);
         }
     }
 }

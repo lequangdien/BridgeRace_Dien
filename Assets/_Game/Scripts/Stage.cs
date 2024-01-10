@@ -7,6 +7,8 @@ public class Stage : MonoBehaviour
     public Transform[] brickPoints;
 
     public List<Vector3> emptyPoint = new List<Vector3>();
+
+    public List<Brick> bricks = new List<Brick>();
     [SerializeField] Brick brickPrefab;
     private void Start()
     {
@@ -31,10 +33,26 @@ public class Stage : MonoBehaviour
          brick.stage = this;
          brick.ChangeColor(colorType);
           emptyPoint.RemoveAt(rand);
+          bricks.Add(brick);
         }
     }
-    internal void AddEmtyPoint(Vector3 position)
+    internal Brick SeekBickPoint(ColorType colorType)
     {
-        emptyPoint.Add(position);
+        Brick brick = null;
+        for (int i = 0;i < bricks.Count; i++)
+        {
+            if (bricks[i].colorType == colorType)
+            {
+                brick = bricks[i];
+
+                break;
+            }
+        }
+        return brick;
+    }
+    internal void RemoveBrick(Brick brick)
+    {
+        emptyPoint.Add(brick.transform.position);
+        bricks.Remove(brick);
     }
 }

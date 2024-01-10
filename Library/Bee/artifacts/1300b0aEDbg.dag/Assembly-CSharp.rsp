@@ -386,8 +386,10 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
 "Assets/_Game/ScriptableObject/ColorData.cs"
+"Assets/_Game/Scripts/Bot.cs"
 "Assets/_Game/Scripts/Brick.cs"
 "Assets/_Game/Scripts/CameraFllow.cs"
+"Assets/_Game/Scripts/Character.cs"
 "Assets/_Game/Scripts/ColorObject.cs"
 "Assets/_Game/Scripts/ConstranName.cs"
 "Assets/_Game/Scripts/HideOnPlay.cs"
@@ -396,6 +398,9 @@
 "Assets/_Game/Scripts/PlayerBrick.cs"
 "Assets/_Game/Scripts/Stage.cs"
 "Assets/_Game/Scripts/Stair.cs"
+"Assets/_Game/Scripts/StateMachie/AttackState.cs"
+"Assets/_Game/Scripts/StateMachie/IState.cs"
+"Assets/_Game/Scripts/StateMachie/PatrolState.cs"
 -langversion:9.0
 
 /deterministic

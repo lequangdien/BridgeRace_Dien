@@ -5,32 +5,48 @@ using UnityEngine.AI;
 
 public class Bot : Character
 {
+    [SerializeField] private Rigidbody _rb;
+    IState<Bot> currentState;
     public  NavMeshAgent agent;
-    public Transform winPoint;
-    private void Start()
+    public Vector3 winPoint;
+    private Vector3 dir;
+    public bool Isdir => Vector3.Distance(dir,Vector3.right*transform.position.x+Vector3.forward*transform.position.z)<0.1f;
+
+    public void Start()
     {
-        ChangeColor(ColorType.Red);
-        agent = GetComponent<NavMeshAgent>();
+       ChangeColor(ColorType.Red);
+       agent = GetComponent<NavMeshAgent>();
+        ChangeState(new PatrolState());
     }
-    private void Update()
+   private void Update()
     {
-        agent.destination=winPoint.position;
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag(ConstranName.Brick))
+        if (currentState !=null )
         {
-            Brick brick = other.GetComponent<Brick>();
-            if (brick.colorType == colorType)
-            {
-                brick.OnDespawn();
-
-                AddBrick();
-
-                Destroy(brick.gameObject);
-            }
+            currentState.OnExcute(this);
+            CanMove(transform.position);
         }
-
+        
 
     }
+    
+    public void ChangeState(IState<Bot> state)
+    {
+        if (currentState !=null)
+        {
+            currentState.OnExit(this);
+        }
+        currentState = state;
+        if (currentState !=null)
+        {
+            currentState.OnEnter(this);
+        }
+    }
+    public void SetPointDestination(Vector3 position)
+    {
+        dir = position;
+        dir.y = 0;
+        agent.SetDestination(position);
+    }
+    
+    
 }
