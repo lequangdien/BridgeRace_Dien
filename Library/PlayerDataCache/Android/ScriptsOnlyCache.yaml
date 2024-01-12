@@ -1,11 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Bot
     - Brick
     - CameraFllow
     - ColorData
+    - FixedJoystick
     - HideOnPlay
-    - JoystickController
     - NewStageBox
     - Player
     - PlayerBrick
@@ -55,7 +56,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
   methodsToPreserve: []
   sceneClasses:
-    Assets/_Game/Scenes/SampleScene.unity:
+    Assets/_Game/Scenes/Scenes.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -93,43 +94,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16078}
     - Class: 114
-      Script: {instanceID: 16100}
+      Script: {instanceID: 16570}
     - Class: 114
-      Script: {instanceID: 16662}
+      Script: {instanceID: 16660}
     - Class: 114
-      Script: {instanceID: 16722}
+      Script: {instanceID: 16720}
     - Class: 114
-      Script: {instanceID: 17074}
+      Script: {instanceID: 17072}
     - Class: 114
-      Script: {instanceID: 17242}
+      Script: {instanceID: 17240}
     - Class: 114
-      Script: {instanceID: 17278}
+      Script: {instanceID: 17276}
     - Class: 114
-      Script: {instanceID: 17428}
+      Script: {instanceID: 17426}
     - Class: 114
-      Script: {instanceID: 17668}
+      Script: {instanceID: 17666}
     - Class: 114
-      Script: {instanceID: 18432}
+      Script: {instanceID: 18430}
     - Class: 114
-      Script: {instanceID: 18538}
+      Script: {instanceID: 18536}
     - Class: 114
-      Script: {instanceID: 18624}
+      Script: {instanceID: 18622}
     - Class: 114
-      Script: {instanceID: 18790}
+      Script: {instanceID: 18788}
     - Class: 114
-      Script: {instanceID: 19010}
+      Script: {instanceID: 19008}
     - Class: 114
       Script: {instanceID: 19494}
     - Class: 114
-      Script: {instanceID: 20034}
+      Script: {instanceID: 20036}
     - Class: 114
-      Script: {instanceID: 20240}
+      Script: {instanceID: 20242}
     - Class: 114
-      Script: {instanceID: 20496}
+      Script: {instanceID: 20322}
     - Class: 114
-      Script: {instanceID: 20518}
+      Script: {instanceID: 20500}
     - Class: 114
-      Script: {instanceID: 21280}
+      Script: {instanceID: 20522}
+    - Class: 114
+      Script: {instanceID: 21286}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -137,6 +140,8 @@ ScriptsOnlyBuild:
     - Class: 136
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -147,6 +152,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -167,12 +174,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
-  - hash:
-      serializedVersion: 2
-      Hash: d8dc82ff95d1c97e39005c574579bdd5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: JoystickController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -457,7 +458,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9e2cdb6bf7bc20e6f3618b693fa3d870
+      Hash: 70a4adf53e2e7619256289268afb3239
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -703,7 +704,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 78a1c62ab4d9849a683c9dc182480ac7
+      Hash: 3eaef8c0eaba4d4dd9cfb5dbbd958173
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Stage
@@ -913,6 +914,12 @@ ScriptsOnlyBuild:
     className: NewStageBox
   - hash:
       serializedVersion: 2
+      Hash: dabfab9158c9247ed9d4d66f93a53dd7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bot
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -949,7 +956,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 0ce5b42b3bf77eacf975d94ef0f1ed35
+      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraFllow
@@ -1111,6 +1118,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: d06d1611aa9c14f903109c5ce6e7c8c8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Character
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1237,5 +1250,5 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 13
   scenePathNames:
-  - Assets/_Game/Scenes/SampleScene.unity
-  playerPath: D:/game_unity/BridgeRace_Dien/GameBridgeRace.apk
+  - Assets/_Game/Scenes/Scenes.unity
+  playerPath: D:/game_unity/BridgeRace_Dien/GameBridgeRace_final.apk
