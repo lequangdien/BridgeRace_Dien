@@ -8,6 +8,7 @@ public class PatrolState : IState<Bot>
     int target;
     public void OnEnter(Bot t)
     {
+        t.ChangedAnim("run");
         target = Random.Range(2,7);
         FollowTarget(t);
     }

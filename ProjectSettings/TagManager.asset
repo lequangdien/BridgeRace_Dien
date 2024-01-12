@@ -8,6 +8,7 @@ TagManager:
   - Stair
   - Point
   - Character
+  - Bot
   layers:
   - Default
   - TransparentFX

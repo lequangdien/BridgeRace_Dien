@@ -401,6 +401,7 @@
 "Assets/_Game/Scripts/Other/CameraFllow.cs"
 "Assets/_Game/Scripts/Other/ConstranName.cs"
 "Assets/_Game/Scripts/Other/Singleton.cs"
+"Assets/_Game/Scripts/Other/WinGame.cs"
 "Assets/_Game/Scripts/StateMachie/AttackState.cs"
 "Assets/_Game/Scripts/StateMachie/IState.cs"
 "Assets/_Game/Scripts/StateMachie/PatrolState.cs"

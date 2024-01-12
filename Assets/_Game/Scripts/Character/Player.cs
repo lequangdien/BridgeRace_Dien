@@ -35,7 +35,13 @@ public class Player : Character
         if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
         {
             transform.rotation = Quaternion.LookRotation(_rb.velocity);
+            ChangedAnim("run");
         }
+        else
+        {
+            ChangedAnim("idle");
+        }
+       
     }
     bool IsWallInFront()
     {

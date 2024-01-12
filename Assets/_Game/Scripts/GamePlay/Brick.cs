@@ -8,7 +8,7 @@ public class Brick : ColorObject
 
     private void Start()
     {
-        ChangeColor((ColorType)Random.Range(1,3));
+        ChangeColor((ColorType)Random.Range(1,4));
     }
     public void OnDespawn()
     {

@@ -28,7 +28,7 @@ public class Stage : MonoBehaviour
     public void NewBrick(ColorType colorType)
     {
         if (emptyPoint.Count >0) {
-            int rand = Random.Range(0, emptyPoint.Count);
+        int rand = Random.Range(0, emptyPoint.Count);
          Brick brick=   Instantiate(brickPrefab, emptyPoint[rand],Quaternion.identity);
          brick.stage = this;
          brick.ChangeColor(colorType);

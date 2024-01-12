@@ -14,6 +14,8 @@ public class Character : ColorObject
     [SerializeField] private PlayerBrick playerBrickPrefab;
     [SerializeField] private Transform brickHolder;
     public Stage stage;
+    public Animator anim;
+    private string currentAnim;
     public int BrickCount => playerBricks.Count;
     
     public bool CanMove(Vector3 nextPoint)
@@ -61,6 +63,17 @@ public class Character : ColorObject
             Destroy(playerBricks[i]);
         }
         playerBricks.Clear();
+    }
+    public void ChangedAnim(string animName)
+    {
+        if (currentAnim != animName)
+        {
+            anim.ResetTrigger(currentAnim);
+
+            currentAnim = animName;
+
+            anim.SetTrigger(currentAnim);
+        }
     }
     public void OnTriggerEnter(Collider other)
     {

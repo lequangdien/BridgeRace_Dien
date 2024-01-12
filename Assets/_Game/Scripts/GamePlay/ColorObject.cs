@@ -7,7 +7,7 @@ public class ColorObject : MonoBehaviour
     public ColorType colorType;
     public Material[] colorMat;
     [SerializeField] private ColorData colorData;
-    [SerializeField] private MeshRenderer renderer;
+    [SerializeField] private Renderer renderer;
     // Start is called before the first frame update
     public void ChangeColor(ColorType colorType)
     {
